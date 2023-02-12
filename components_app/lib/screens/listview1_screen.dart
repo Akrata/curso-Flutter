@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Listview1Screen extends StatelessWidget {
-  const Listview1Screen({Key? key}) : super(key: key);
+  Listview1Screen({Key? key}) : super(key: key);
+
+  final List options = ['HOla', 'Como', 'Va'];
 
   @override
   Widget build(BuildContext context) {
@@ -9,8 +11,20 @@ class Listview1Screen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("ListView Tipo 1"),
       ),
-      body: const Center(
-        child: Text('Listview1Screen'),
+      body: ListView.separated(
+        itemCount: options.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text(options[index]),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () {
+              print(options[index]);
+            },
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return const Divider();
+        },
       ),
     );
   }
