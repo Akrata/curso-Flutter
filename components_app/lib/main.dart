@@ -1,5 +1,8 @@
+import 'package:components_app/router/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:components_app/screens/screens.dart';
+
+import 'themes/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,11 +18,10 @@ class MyApp extends StatelessWidget {
       // home: Scaffold(
       //   body: Listview1Screen(),
       // ),
-      initialRoute: 'home',
-      routes: {
-        'home': (context) => HomeScreen(),
-        'listview1': (context) => Listview1Screen(),
-      },
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.getAppRoutes(),
+      onGenerateRoute: (settings) => AppRoutes.OngenerateRoute(settings),
+      theme: AppTheme.lightTheme,
     );
   }
 }

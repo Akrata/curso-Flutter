@@ -1,0 +1,48 @@
+import 'package:components_app/screens/card_screen.dart';
+import 'package:flutter/material.dart';
+
+import '../models/models.dart';
+import '../screens/screens.dart';
+
+class AppRoutes {
+  static const initialRoute = 'home';
+
+  static final menuOptions = <MenuOptions>[
+    // MenuOptions(
+    //     route_dir: 'home',
+    //     name: 'Home Screen',
+    //     screen: HomeScreen(),
+    //     icon: Icons.home),
+    MenuOptions(
+        route_dir: 'listview1',
+        name: 'Listview 1',
+        screen: Listview1Screen(),
+        icon: Icons.library_books_outlined),
+    MenuOptions(
+        route_dir: 'card',
+        name: 'card',
+        screen: CardScreen(),
+        icon: Icons.card_membership_outlined),
+  ];
+
+  static Map<String, Widget Function(BuildContext)> getAppRoutes() {
+    final Map<String, Widget Function(BuildContext)> appRoutes = {};
+
+    for (var element in menuOptions) {
+      appRoutes.addAll({element.route_dir: (context) => element.screen});
+    }
+
+    return appRoutes;
+  }
+
+  // static Map<String, Widget Function(BuildContext)> routes = {
+  //   'home': (context) => HomeScreen(),
+  //   'listview1': (context) => Listview1Screen(),
+  // };
+
+  static OngenerateRoute(RouteSettings settings) {
+    return MaterialPageRoute(
+      builder: (context) => HomeScreen(),
+    );
+  }
+}
