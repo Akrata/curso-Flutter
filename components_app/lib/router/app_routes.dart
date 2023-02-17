@@ -23,6 +23,11 @@ class AppRoutes {
         name: 'card',
         screen: CardScreen(),
         icon: Icons.card_membership_outlined),
+    MenuOptions(
+        route_dir: 'alert',
+        name: 'Alert',
+        screen: AlertScreen(),
+        icon: Icons.crisis_alert),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
