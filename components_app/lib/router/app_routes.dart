@@ -28,6 +28,11 @@ class AppRoutes {
         name: 'Alert',
         screen: AlertScreen(),
         icon: Icons.crisis_alert),
+    MenuOptions(
+        route_dir: 'circleAvatar',
+        name: 'Circle Avatar',
+        screen: CircleAvatarScreen(),
+        icon: Icons.crisis_alert),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
