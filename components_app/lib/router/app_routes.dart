@@ -32,7 +32,12 @@ class AppRoutes {
         route_dir: 'circleAvatar',
         name: 'Circle Avatar',
         screen: CircleAvatarScreen(),
-        icon: Icons.crisis_alert),
+        icon: Icons.circle_outlined),
+    MenuOptions(
+        route_dir: 'animatedContainer',
+        name: 'Animated Container',
+        screen: AnimatedScreen(),
+        icon: Icons.check_box_outline_blank_sharp),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
