@@ -38,6 +38,11 @@ class AppRoutes {
         name: 'Animated Container',
         screen: AnimatedScreen(),
         icon: Icons.check_box_outline_blank_sharp),
+    MenuOptions(
+        route_dir: 'inputs',
+        name: 'Inputs',
+        screen: InputScreen(),
+        icon: Icons.input_rounded),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
