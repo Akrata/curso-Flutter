@@ -43,6 +43,11 @@ class AppRoutes {
         name: 'Inputs',
         screen: InputScreen(),
         icon: Icons.input_rounded),
+    MenuOptions(
+        route_dir: 'slider',
+        name: 'Sliders',
+        screen: SliderScreen(),
+        icon: Icons.sd_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
