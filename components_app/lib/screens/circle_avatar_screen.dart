@@ -7,18 +7,18 @@ class CircleAvatarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Circle Avatar"),
+        title: const Text("Circle Avatar"),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 10),
+            margin: const EdgeInsets.only(right: 10),
             child: CircleAvatar(
               backgroundColor: Colors.green[100],
-              child: Text("SL"),
+              child: const Text("SL"),
             ),
           )
         ],
       ),
-      body: Center(
+      body: const Center(
         child: CircleAvatar(
             radius: 100,
             backgroundImage: NetworkImage(

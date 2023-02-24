@@ -9,10 +9,10 @@ class AlertScreen extends StatelessWidget {
       barrierDismissible: false,
       context: context,
       builder: (context) => AlertDialog(
-        title: Text("Alerta Flutter"),
+        title: const Text("Alerta Flutter"),
         content: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [
+          children: const [
             Text("Este es el contenido de la alerta"),
             SizedBox(
               height: 10,
@@ -25,7 +25,7 @@ class AlertScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text("Cancelar"),
+            child: const Text("Cancelar"),
           ),
         ],
       ),
@@ -37,10 +37,10 @@ class AlertScreen extends StatelessWidget {
       barrierDismissible: false,
       context: context,
       builder: (context) => CupertinoAlertDialog(
-        title: Text("Alerta Flutter"),
+        title: const Text("Alerta Flutter"),
         content: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [
+          children: const [
             Text("Este es el contenido de la alerta"),
             SizedBox(
               height: 10,
@@ -53,7 +53,7 @@ class AlertScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text("Cancelar"),
+            child: const Text("Cancelar"),
           ),
         ],
       ),
@@ -77,7 +77,7 @@ class AlertScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 16)),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             ElevatedButton(
@@ -97,7 +97,7 @@ class AlertScreen extends StatelessWidget {
         onPressed: () {
           Navigator.pop(context);
         },
-        child: Icon(Icons.close),
+        child: const Icon(Icons.close),
       ),
     );
   }

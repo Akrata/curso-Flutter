@@ -17,17 +17,17 @@ class CustomCard2 extends StatelessWidget {
       child: Column(
         children: [
           FadeInImage(
-            placeholder: AssetImage('assets/img/jar-loading.gif'),
+            placeholder: const AssetImage('assets/img/jar-loading.gif'),
             image: NetworkImage(urlImage),
             width: double.infinity,
             height: 230,
             fit: BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 300),
+            fadeInDuration: const Duration(milliseconds: 300),
           ),
           if (textImg != null)
             Container(
               alignment: AlignmentDirectional.centerEnd,
-              padding: EdgeInsets.only(right: 20, top: 10, bottom: 10),
+              padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
               child: Text(textImg ?? 'No title'),
             )
         ],

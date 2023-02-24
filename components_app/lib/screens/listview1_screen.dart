@@ -18,6 +18,7 @@ class Listview1Screen extends StatelessWidget {
             title: Text(options[index]),
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () {
+              // ignore: avoid_print
               print(options[index]);
             },
           );

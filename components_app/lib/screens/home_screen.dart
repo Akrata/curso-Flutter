@@ -1,4 +1,3 @@
-import 'package:components_app/models/models.dart';
 import 'package:components_app/router/app_routes.dart';
 import 'package:components_app/themes/app_theme.dart';
 import 'package:flutter/material.dart';

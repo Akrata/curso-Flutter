@@ -48,6 +48,11 @@ class AppRoutes {
         name: 'Sliders',
         screen: SliderScreen(),
         icon: Icons.sd_outlined),
+    MenuOptions(
+        route_dir: 'infiniteScroll',
+        name: 'infiniteScroll',
+        screen: InfiniteScrollScreen(),
+        icon: Icons.list_alt),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

@@ -21,8 +21,10 @@ class InputScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inputs y Forms'),
-        leading: BackButton(),
+        title: const Text('Inputs y Forms'),
+        leading: BackButton(
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -37,7 +39,7 @@ class InputScreen extends StatelessWidget {
                   formProperty: 'first_name',
                   formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomInputField(
@@ -46,7 +48,7 @@ class InputScreen extends StatelessWidget {
                   formProperty: 'last_name',
                   formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomInputField(
@@ -56,7 +58,7 @@ class InputScreen extends StatelessWidget {
                   formProperty: 'email',
                   formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CustomInputField(
@@ -66,11 +68,11 @@ class InputScreen extends StatelessWidget {
                   formProperty: 'password',
                   formValues: formValues,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 DropdownButtonFormField(
-                  items: [
+                  items: const [
                     DropdownMenuItem(
                       value: 'Admin',
                       child: Text("Admin"),
@@ -81,24 +83,24 @@ class InputScreen extends StatelessWidget {
                     )
                   ],
                   onChanged: (String? value) {
-                    print(value);
                     formValues['role'] = value ?? 'User';
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     FocusScope.of(context).requestFocus(FocusNode());
                     if (!myFormKey.currentState!.validate()) {
+                      // ignore: avoid_print
                       print("formulario no valido");
                       return;
                     }
-                    ;
+                    // ignore: avoid_print
                     print(formValues);
                   },
-                  child: SizedBox(
+                  child: const SizedBox(
                     width: double.infinity,
                     child: Center(
                       child: Text("Enviar"),

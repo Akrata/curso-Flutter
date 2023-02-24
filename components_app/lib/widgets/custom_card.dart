@@ -12,7 +12,7 @@ class CustomCard extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          ListTile(
+          const ListTile(
             leading: Icon(
               Icons.abc_outlined,
               color: AppTheme.primary,
@@ -28,11 +28,11 @@ class CustomCard extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: Text("Cancel"),
+                  child: const Text("Cancel"),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text("ok"),
+                  child: const Text("ok"),
                 ),
               ],
             ),
